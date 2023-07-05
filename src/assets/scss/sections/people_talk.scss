@@ -1,0 +1,119 @@
+@import '../mixins';
+
+
+
+.block {
+    @include flex-centred;
+    flex-direction: column;
+    padding: 58px 30px 0px 30px;
+    background-image: url('../img/testmonials-bg 1.png');
+    background-color:#4B3B4E;
+    background-position: bottom;
+    background-size: cover;
+    margin: 0 auto;
+    &__title {
+        margin-bottom: 52px;
+        text-align: center;
+        font-weight: 700;
+        font-size: 36px;
+        line-height: 48px;
+        color: $white;
+    }
+
+    &__wrapper {
+        display: flex;
+        justify-content: center;
+        align-items: start;
+        flex-direction: column;
+        margin-bottom: 36px;
+    }
+
+    &__review {
+        flex-direction: column;
+        margin-bottom: 46px;
+    }
+
+    &__img {
+        margin-bottom: 30px;
+    }
+
+    &__text {
+        text-align: center;
+        font-family: $secondary-font;
+        font-style: italic;
+        font-weight: 700;
+        font-size: 16px;
+        line-height: 24px;
+        color: $white;
+    }
+
+    &__about {
+        margin-bottom: 22px;
+        text-align: center;
+        font-family: $secondary-font;
+        font-weight: 400;
+        font-size: 14px;
+        line-height: 21px;
+        color:$text-color-purple;
+    }
+
+    &__line {
+        width: 75%;
+        height: 2px;
+        background-color: #645766;
+        display: block;
+        margin: auto;
+    }
+}
+
+@media (min-width:481px) {
+
+    .block {
+        padding: 86px 10px 0px 10px;
+
+        &__title {
+            margin-bottom: 88px;
+            font-size: 42px;
+            line-height: 44px;
+        }
+
+        &__wrapper {
+            justify-content: space-between;
+            flex-direction: row;
+            flex-wrap: wrap;
+            margin-bottom: 68px;
+        }
+
+        &__review {
+            width: 45%;
+            margin-bottom: 46px;
+        }
+
+    }
+}
+
+@media (min-width:993px) {
+    .block {
+        padding: 108px 80px 0px 80px;
+
+        &__title {
+            margin-bottom: 82px;
+            font-size: 48px;
+            line-height: 50px;
+        }
+
+        &__wrapper {
+            justify-content: space-between;
+            flex-direction: row;
+            flex-wrap: wrap;
+            margin-bottom: 0px;
+        }
+
+        &__review {
+            width: 28%;
+            margin-bottom: 116px;
+            text-align: center;
+        }
+
+    }
+}

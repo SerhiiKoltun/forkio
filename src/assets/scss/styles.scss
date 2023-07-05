@@ -1,0 +1,53 @@
+@import 'reset.scss';
+@import 'mixins.scss';
+@import 'variables.scss';
+@import 'sections/rev-editor.scss';
+@import 'sections/advanteges.scss';
+@import 'sections/pricing.scss';
+@import 'components/git-statistic.scss';
+@import 'components/advantages-list.scss';
+@import 'components/price-card.scss';
+@import 'sections/header.scss';
+@import 'sections/people_talk.scss';
+
+
+
+
+
+.wrapper {
+    width: 100%;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 10px;
+}
+body {
+    font-family: $main-font;
+    font-size: $default-font-size;
+}
+
+.title {
+    color: $white;
+    text-align: center;
+    font-size: 48px;
+    font-weight: $bold;
+
+     @media screen and (max-width: 992px) {
+        font-size: 42px;
+    }
+    @media screen and (max-width: 480px) {
+        font-size: 28px;
+    }
+}
+.title--big-size {
+    font-size: 54px;
+    color: $secondary-color;
+    text-transform: uppercase;
+
+    @media screen and (max-width: 992px) {
+        font-size: 42px;
+    }
+    @media screen and (max-width: 480px) {
+        font-size: 26px;
+    }
+}
+

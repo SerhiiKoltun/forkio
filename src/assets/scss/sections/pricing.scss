@@ -1,0 +1,25 @@
+@import '../mixins.scss';
+
+.pricing {
+    padding: 85px 0 100px;
+    background: url('../img/section-pricing/pricing-bg.png') no-repeat center;
+    &__list {
+        @include flex-ai-c-jc-sb;
+        @include flex-wrapped;
+        margin-top: 60px;
+
+        @media screen and (max-width: 992px) {
+        align-items: flex-start;
+        justify-content: center;
+        gap: 25px;
+        @media screen and (max-width: 480px) {
+            gap: 18px;
+            margin-top: 30px;
+        }
+    }
+    }
+    @media screen and (max-width: 480px) {
+        padding: 14px 0 12px;
+        background: #4B3B4E;
+    }
+}

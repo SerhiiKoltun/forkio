@@ -1,0 +1,19 @@
+@import '../mixins.scss';
+.main {
+    .rev-editor {
+    margin-bottom: 70px;
+    &__description {
+    color: $text-color-dark;
+    text-align: center;
+    font-size: 21px;
+    font-family: $secondary-font;
+    line-height: 32px;
+    margin: 35px auto 13px;
+    max-width: 885px;
+    @media screen and (max-width: 480px) {
+        font-size: 14px;
+        line-height: 20px;
+    }
+}
+}
+}

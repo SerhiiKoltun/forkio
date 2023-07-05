@@ -1,0 +1,53 @@
+@import '../mixins.scss';
+
+.advantages-list {
+    @include flex-column;
+
+    &__item {
+        @include flex-ai-c-jc-sb;
+        gap: 23px;
+        margin-bottom: 32px;
+        max-width: 520px;
+        img {
+            max-width: 112px;
+
+            @media screen and (max-width: 992px) {
+                max-width: 12.2%;
+            }
+            @media screen and (max-width: 480px) {
+                max-width: 112px;
+            }
+        }
+
+        @media screen and (max-width: 992px) {
+            max-width: 95%;
+        }
+
+        @media screen and (max-width: 480px) {
+            flex-direction: column;
+        }
+    }
+    &__data {
+        @media screen and (max-width: 480px) {
+            text-align: center;
+        }
+    }
+    &__title {
+        color: $text-color-dark;
+        font-size: 16px;
+        font-weight: $regular;
+        line-height: 21px;
+        margin-bottom: 17px;
+    }
+    &__desc {
+        color: $text-color-grey;
+        font-size: 14px;
+        line-height: 21px;
+
+        
+    }
+
+    @media screen and (max-width: 992px) {
+        align-items: center;
+    }
+}

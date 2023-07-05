@@ -1,0 +1,252 @@
+@import "../mixins.scss";
+
+.header {
+  margin-bottom: 130px;
+  &_background {
+    background: url("../img/header-bg.png") center/cover no-repeat;
+    margin: 0 auto;
+    min-height: 800px;
+    position: relative;
+  }
+}
+.navigation {
+  display: flex;
+    justify-content: space-between;
+    align-items: center;
+  height: 102px;
+  background-color: #27262a;
+  &__name {
+    display: none;
+  }
+  &__logo {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+  }
+  &__list {
+    display: none;
+  }
+  &__item {
+    width: 100%;
+    text-align: start;
+    border-bottom: 2px solid #574f4f;
+  }
+  &__link {
+    display: block;
+    padding-left: 34px;
+    padding-top: 28px;
+    padding-bottom: 20px;
+    font-weight: 400;
+    font-size: 26px;
+    line-height: 26px;
+    color: $white;
+  }
+
+  &__menu {
+    float: left;
+    display: block;
+    position: relative;
+    width: 26px;
+
+    height: 21px;
+    .notes {
+      color: $white;
+      transform: rotate(180deg);
+    }
+    .close {
+      display: none;
+    }
+
+  }
+
+  &__btn {
+    padding-right: 4vw;
+    button {
+      @include btn;
+      width: 120px;
+      padding-top: 10px;
+      padding-bottom: 10px;
+      font-size: 15px;
+      line-height: 15px;
+      cursor: pointer;
+      @include transition;
+    }
+  }
+}
+
+.active_link {
+  position: relative;
+  color: $main-color;
+}
+
+.active_link::before {
+  content: "";
+  display: block;
+  position: absolute;
+  width: 8px;
+  height: 53px;
+  left: 0;
+  top: 10px;
+  background-color: $main-color;
+}
+
+.navigation__list.active_menu {
+  display: flex;
+  flex-direction: column;
+  position: absolute;
+  z-index: 5;
+  top: 102px;
+  right: 10px;
+  width: 293px;
+  height: 318px;
+  text-align: center;
+  background-color: #333333;
+}
+
+.navigation__menu.active_menu {
+  .close {
+    display: block;
+    color: $white;
+  }
+  .notes {
+    display: none;
+  }
+}
+
+.fork {
+  @include flex-centred;
+  flex-direction: column;
+  margin-top: 50px;
+
+  &__title {
+    margin-bottom: 20px;
+    font-weight: 700;
+    font-size: 48px;
+    line-height: 48px;
+    color: $white;
+  }
+
+  &__text {
+    margin-bottom: 14px;
+    text-align: center;
+    font-weight: 400;
+    font-size: 18px;
+    line-height: 24px;
+    color: $main-color;
+  }
+
+  &__version {
+    color: $text-color-grey;
+  }
+
+  &__btn {
+    position: absolute;
+    bottom: -50px;
+    text-align: center;
+    @include transition;
+    span {
+      color: $text-color-grey;
+    }
+  }
+
+  &__button {
+    @include btn;
+    width: 290px;
+    padding-top: 13px;
+    padding-bottom: 13px;
+    margin-bottom: 12px;
+    font-size: 18px;
+    line-height: 20px;
+    @include transition;
+    cursor: pointer;
+    border: 2px solid transparent;
+  }
+
+  &__button:hover {
+    border: 2px solid $main-color;
+    color: $main-color;
+    background-color: $white;
+    @include transition;
+  }
+}
+
+@media (min-width: 481px) {
+  .navigation {
+    height: 118px;
+    &__menu {
+      display: none;
+    }
+    &__list {
+      display: flex;
+      justify-content: space-around;
+      align-items: center;
+      position: absolute;
+      top: 84px;
+      width: 95%;
+    }
+    &__logo {
+      display: flex;
+      justify-content: flex-start;
+      padding-left: 4vw;
+      margin-top: -27px;
+      svg:hover{
+        padding-left: 30px;
+        background-image: url('../img/logo-hover 1.png');
+      }
+    }
+    &__name {
+      display: block;
+      font-family: $secondary-font;
+      font-weight: 700;
+      font-size: 24px;
+      line-height: 16px;
+      color: $main-color;
+      padding-left: 17px;
+    }
+    &__name:hover{
+        color: $white;
+
+    }
+    &__link {
+      padding: 0;  
+      font-weight: 700;
+      font-size: 14px;
+      line-height: 18px;
+      color: $main-color;
+      @include transition;
+    }
+    &__link:hover{
+        color:$white;
+        @include transition;
+    }
+    &__item{
+        width: max-content;
+        border: none;
+   }
+   &__btn{
+    position: relative;
+    bottom: 12px;
+     button:hover{
+        background-color: $white;
+        color: $main-color;
+        @include transition;
+     }
+   }
+  }
+  .active_link::before {
+    content: "";
+    display: none;
+}
+
+}
+
+@media (min-width: 993px) {
+    .navigation {
+        background-color: black;
+    &__list{
+        width: 527px;
+        right: 14.5vw;
+        top: 40px;
+     }
+    }
+}

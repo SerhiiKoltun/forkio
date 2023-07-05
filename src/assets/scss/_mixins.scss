@@ -1,0 +1,57 @@
+@mixin flex-centred {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+@mixin flex-ai-c-jc-sb {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+@mixin flex-jc-sb {
+    display: flex;
+    justify-content: space-between;
+}
+
+@mixin flex-wrapped {
+    flex-wrap: wrap;
+}
+
+@mixin flex-column {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+}
+
+@mixin transition {
+    transition: all .3s ease-in-out;
+}
+
+@mixin span-block {
+    display: block;
+    width: 100%;
+    text-align: center;
+}
+
+@mixin position-rel-zi-10 {
+    position: relative;
+    z-index: 10;
+}
+
+
+
+
+@mixin btn {
+    display: flex;
+    justify-content: center;
+    border-radius: 40px;
+    font-family: 'Montserrat';
+    font-weight: 700;
+    color: $white;
+    background-color: $main-color;
+}
+
+
+
